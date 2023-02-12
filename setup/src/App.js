@@ -22,7 +22,7 @@ function App() {
     } else if (name && isEditing) {
       //deal with editing
     } else {
-      //showalert
+      showAlert(true, "success", "Item value added")
       //create new item
       const newItem = {id: new Date().getTime().toString(), title: name}
       setList([...list, newItem])
@@ -33,6 +33,7 @@ function App() {
   const showAlert = (show = "false", msg = "", type = "") => {
     setAlert({show, msg, type})
   }
+  const clearItems = () => {}
 
   return (
     <section className="section-center">
